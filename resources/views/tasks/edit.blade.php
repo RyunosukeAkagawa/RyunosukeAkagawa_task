@@ -23,8 +23,7 @@
             </ul>
         </div>
     @endif
-
-    <form action="{{ route('tasks.update', $task) }}" method="post">
+    <form action="{{ route('tasks.update', $task) }}" method="post" style="display: inline-block;">
         @csrf
         @method('PATCH')
         <p>
@@ -37,8 +36,8 @@
         <textarea name="body" class="body" id="body">{{ $task->body }}</textarea>
         <br>
         <input type="submit" value="更新">
-        <button onclick="location.href='{{ route('tasks.show', $task) }}'">詳細に戻る</button>
     </form>
+        <button onclick="location.href='{{ route('tasks.show', $task) }}'" style="display: inline-block; margin-left:-120px;">詳細に戻る</button>
 </body>
 
 </html>
